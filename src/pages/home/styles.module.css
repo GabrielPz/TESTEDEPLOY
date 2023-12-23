@@ -1,0 +1,34 @@
+
+.body{
+    background: linear-gradient( black, red);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    padding: 0 0 0 1rem;
+    overflow: auto;
+    scrollbar-width: thin; /* "auto" or "thin" depending on browser support */
+    scrollbar-color: #333333 #cccccc; 
+}
+
+/* For WebKit-based browsers like Chrome and Safari */
+.body::-webkit-scrollbar {
+    width: 10px; /* width of the scrollbar */
+}
+
+.body::-webkit-scrollbar-track {
+    background: #cccccc; /* color of the track */
+}
+
+.body::-webkit-scrollbar-thumb {
+    background-color: #333333; /* color of the thumb */
+}
+
+.anuncioSlider{
+    padding: 32px;
+    margin-top: 2rem;
+}
+
+.searchBar {
+    
+    margin: 2rem 0 0rem 2rem;
+  }

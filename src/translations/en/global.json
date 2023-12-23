@@ -1,0 +1,21 @@
+{
+    "anuncieAqui": "Advertise Here",
+    "mudaridioma": "Change Language",
+    "pesquisar": "Search",
+    "pagamentoTitulo": "Join this wonderful experience",
+    "pagamentoSubtitulo": "Display up to 5 photos!",
+    "descCamera": "Click to upload or drag here",
+    "descFotoTitulo": "Describe your photo",
+    "descFotoForm": "Photo description",
+    "pagamentoTitulo2": "Fill in your Details",
+    "nome": "Name",
+    "email": "Email",
+    "nomeFoto": "Photo Name",
+    "botaoProximo": "Next",
+    "botaoVoltar": "Back",
+    "botaoEnviar": "Send",
+    "errorTitulo": "Your purchase was not completed :(",
+    "errorSubtitulo": "An error occurred during payment!",
+    "errorBody": "Please contact support",
+    "phone": "Phone"
+}

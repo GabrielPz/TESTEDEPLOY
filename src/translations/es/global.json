@@ -1,0 +1,21 @@
+{
+    "anuncieAqui": "Anuncie Aquí",
+    "mudaridioma": "Cambiar Idioma",
+    "pesquisar": "Buscar",
+    "pagamentoTitulo": "Únete a esta maravillosa experiencia",
+    "pagamentoSubtitulo": "¡Muestra hasta 5 fotos!",
+    "descCamera": "Haz clic para enviar o arrastra aquí",
+    "descFotoTitulo": "Describe tu foto",
+    "descFotoForm": "Descripción de la foto",
+    "pagamentoTitulo2": "Completa tus Datos",
+    "nome": "Nombre",
+    "email": "Email",
+    "nomeFoto": "Nombre de la Foto",
+    "botaoProximo": "Siguiente",
+    "botaoVoltar": "Volver",
+    "botaoEnviar": "Enviar",
+    "errorTitulo": "Tu compra no se completó :(",
+    "errorSubtitulo": "¡Se produjo un error durante el pago!",
+    "errorBody": "Por favor, contacta al soporte",
+    "phone": "Teléfono"
+}

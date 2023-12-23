@@ -1,0 +1,21 @@
+.body{
+    /* background: linear-gradient( black, rgb(65, 64, 64)); */
+    background: linear-gradient( black, red);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    padding: 0 0 0 1rem;
+    overflow: auto;
+    scrollbar-width: thin; /* "auto" or "thin" depending on browser support */
+    scrollbar-color: #333333 #cccccc; 
+}
+.bodyPayment{
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 0 0 0;
+    height: 80%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
