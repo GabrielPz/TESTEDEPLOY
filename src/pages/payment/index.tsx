@@ -275,7 +275,7 @@ export default function Payment({ products }: PaymentProps) {
     );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
     const response = await stripe.products.list({
         expand: ['data.default_price', 'data.price']
     });
