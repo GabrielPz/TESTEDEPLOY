@@ -1,28 +1,27 @@
-
+/* 
 .boxPaymentContainer{
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     justify-content: center; 
     gap: 2rem;
     align-items: center;
     width: 100%;
     
-}
-
+} */
+/* 
 .plansContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* or 'space-around' for spacing around items */
+    justify-content: space-between; 
     margin: 3rem 0 0 0;
     width: 50%;
     gap: 2rem;
-}
+} */
 
-.planCard{
+/* .planCard{
     height: 17rem;
     min-width: 13rem
-}
+} */
 .selectedPlan {
     scale: 1.1;
     border: rgb(0, 255, 4) 3px solid;
@@ -67,7 +66,7 @@
     scrollbar-width: thin; /* "auto" or "thin" depending on browser support */
     scrollbar-color: #333333 #cccccc; 
 }
-.bodyPayment{
+/* .bodyPayment{
     display: flex;
     flex-direction: column;
     margin: 5rem 0 0 0;
@@ -76,4 +75,40 @@
     align-items: center;
     justify-content: center;
     display: flex;
+} */
+
+.boxPaymentContainer {
+    display: flex;
+    flex-wrap: wrap; /* Ensure items wrap to the next line if space is limited */
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    margin: 0 auto; /* Center the container */
+    max-width: 1200px; /* Limit the maximum width for better scaling */
+}
+
+.plansContainer {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center;
+    margin: 3rem auto 0 auto; /* Center the container and add margin */
+    gap: 2rem;
+    max-width: 1200px; /* Limit the maximum width */
+}
+
+.planCard {
+    height: 17rem;
+    min-width: 13rem;
+    flex: 1 1 300px; /* Allow cards to flexibly resize based on available space */
+}
+
+.bodyPayment {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem auto 0 auto; /* Center the container and add margin */
+    height: 80%;
+    width: 90%; /* Adjust width for better scaling */
+    max-width: 1200px; /* Limit the maximum width */
+    align-items: center;
+    justify-content: center;
 }
