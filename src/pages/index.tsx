@@ -194,8 +194,8 @@ export default function Home({imagesPlan1, imagesPlan2, imagesPlan3, anuncios}: 
                   {selectedImg.descricao}
             </Typography>
             <Typography variant="body1" sx={{color: 'black',}}>
-                  Telefone para contato: {selectedImg.userTelefone}
-                  Email para contato: {selectedImg.userEmail}
+                  Phone: {selectedImg.userTelefone}
+                  Email: {selectedImg.userEmail}
             </Typography>
             </div>
             </div>
