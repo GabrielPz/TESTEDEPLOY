@@ -33,7 +33,7 @@ export default function ResponsiveAppBar(info: AppInfo) {
     }
   const pages = [
     {
-    path: 'home',
+    path: '/',
     label: name, 
     },
     {
