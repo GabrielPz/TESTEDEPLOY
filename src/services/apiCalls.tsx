@@ -18,7 +18,7 @@ export async function handlePaymentSucces(stripeCustomer: string, files: File[])
     formData.append('telefone', formInfo.telefone);
     formData.append('nomeImage', formInfo.nomeImage);
     formData.append('descricao', formInfo.descricao);
-    formData.append('tags', formInfo.tags);
+    // formData.append('tags', formInfo.tags);
     formData.append('planoId', formInfo.planoId.toString());
     formData.append('stripeCustomer', stripeCustomer)
 
