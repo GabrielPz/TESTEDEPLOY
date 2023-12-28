@@ -16,19 +16,31 @@ import SearchIcon from '@mui/icons-material/Search';
 import { settings, settingsAnuncioSlider, settingsCircleSlider, settingsSlidesModal, settingsSlidesModalSub, styleModal } from '@/constants';
 import { useTranslation } from 'react-i18next';
 
+// id: imagem.id,
+// nome: imagem.nome,
+// descricao: imagem.descricao,
+// link: imagem.link,
+// link2: imagem.link2,
+// link3: imagem.link3,
+// link4: imagem.link4,
+// link5: imagem.link5,
+// userNome: imagem.usuario.nome,
+// userEmail: imagem.usuario.email,
+// userTelefone: imagem.usuario.telefone,
+// status: imagem.status
+
 interface ImageProps {
   id: number;
   nome: string;
   descricao: string;
   link: string;
-  lnk2: string;
-  lnk3: string;
-  lnk4: string;
-  lnk5: string;
-  createdAt: string;
-  updatedAt: string;
-  usuarioId: number;
-  planoId: number;
+  link2: string;
+  link3: string;
+  link4: string;
+  link5: string;
+  userNome: string;
+  userEmail: string;
+  userTelefone: string;
 }
 
 interface AnuncioProps{
@@ -181,6 +193,10 @@ export default function Home({imagesPlan1, imagesPlan2, imagesPlan3, anuncios}: 
             <Typography variant="h2" sx={{color: 'black',}}>
                   {selectedImg.descricao}
             </Typography>
+            <Typography variant="body1" sx={{color: 'black',}}>
+                  Telefone para contato: {selectedImg.userTelefone}
+                  Email para contato: {selectedImg.userEmail}
+            </Typography>
             </div>
             </div>
           )}
@@ -193,7 +209,7 @@ export default function Home({imagesPlan1, imagesPlan2, imagesPlan3, anuncios}: 
           onClick={(e) => {
             e.preventDefault();
             setSelectedImg(card);
-            setLink([card.link,card.lnk2,card.lnk3,card.lnk4,card.lnk5])
+            setLink([card.link,card.link2,card.link3,card.link4,card.link5])
             setOpen(true);
             console.log(open);
           }}
@@ -253,7 +269,7 @@ export default function Home({imagesPlan1, imagesPlan2, imagesPlan3, anuncios}: 
           onClick={(e) => {
             e.preventDefault();
             setSelectedImg(card);
-            setLink([card.link,card.lnk2,card.lnk3,card.lnk4,card.lnk5])
+            setLink([card.link,card.link2,card.link3,card.link4,card.link5])
             setOpen(true);
             console.log(open);
           }}>
@@ -289,7 +305,7 @@ export default function Home({imagesPlan1, imagesPlan2, imagesPlan3, anuncios}: 
           onClick={(e) => {
             e.preventDefault();
             setSelectedImg(card);
-            setLink([card.link,card.lnk2,card.lnk3,card.lnk4,card.lnk5])
+            setLink([card.link,card.link2,card.link3,card.link4,card.link5])
             setOpen(true);
             console.log(open);
           }}>
@@ -351,7 +367,7 @@ export default function Home({imagesPlan1, imagesPlan2, imagesPlan3, anuncios}: 
           onClick={(e) => {
             e.preventDefault();
             setSelectedImg(card);
-            setLink([card.link,card.lnk2,card.lnk3,card.lnk4,card.lnk5])
+            setLink([card.link,card.link2,card.link3,card.link4,card.link5])
             setOpen(true);
             console.log(open);
           }}>
@@ -383,7 +399,7 @@ export default function Home({imagesPlan1, imagesPlan2, imagesPlan3, anuncios}: 
           <Slide key={card.id} onClick={(e) => {
             e.preventDefault();
             setSelectedImg(card);
-            setLink([card.link,card.lnk2,card.lnk3,card.lnk4,card.lnk5])
+            setLink([card.link,card.link2,card.link3,card.link4,card.link5])
             setOpen(true);
             console.log(open);
           }}>
@@ -416,7 +432,7 @@ export default function Home({imagesPlan1, imagesPlan2, imagesPlan3, anuncios}: 
           onClick={(e) => {
             e.preventDefault();
             setSelectedImg(card);
-            setLink([card.link,card.lnk2,card.lnk3,card.lnk4,card.lnk5])
+            setLink([card.link,card.link2,card.link3,card.link4,card.link5])
             setOpen(true);
             console.log(open);
           }}
@@ -450,7 +466,7 @@ export default function Home({imagesPlan1, imagesPlan2, imagesPlan3, anuncios}: 
           onClick={(e) => {
             e.preventDefault();
             setSelectedImg(card);
-            setLink([card.link,card.lnk2,card.lnk3,card.lnk4,card.lnk5])
+            setLink([card.link,card.link2,card.link3,card.link4,card.link5])
             setOpen(true);
             console.log(open);
           }}
