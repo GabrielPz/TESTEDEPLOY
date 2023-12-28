@@ -70,13 +70,16 @@ export default function Payment({ products }: PaymentProps) {
                 return planSelected+1;
             }
         }
+
+        const plan = filteredPlan();
+
         sessionStorage.setItem('formData', JSON.stringify({
             email: email,
             name: name,
             telefone: phoneNumber,
             nomeImage: imgName,
             descricao: imgDescription,
-            planoId: filteredPlan()
+            planoId: plan
         }));
 
         const sendData = async () =>{
@@ -275,7 +278,7 @@ export default function Payment({ products }: PaymentProps) {
     );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
     const response = await stripe.products.list({
         expand: ['data.default_price', 'data.price']
     });

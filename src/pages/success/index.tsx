@@ -1,6 +1,6 @@
 import ResponsiveAppBar from '@/components/AppBar'
 import styles from './styles.module.css'
-import { GetServerSideProps, GetStaticProps } from 'next'
+import { GetServerSideProps } from 'next'
 import { stripe } from '@/services/stripe'
 import Stripe from 'stripe'
 import {useEffect} from 'react';
@@ -10,8 +10,16 @@ import { useRouter } from 'next/router'
 import { Paper } from '@mui/material'
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
+interface SuccessProps{
+    customerName: string,
+    sessionId: string,
+    product: {
+        name: string,
+        description: string,
+    }
+}
 
-export default function Success(){
+export default function Success({customerName,sessionId, product}: SuccessProps){
 
     return(
         <>
@@ -22,12 +30,36 @@ export default function Success(){
                 <h1>Compra efetuada com sucesso</h1>
                 <div></div>
 
-                <h2>Parabéns!</h2>
-                <h2>Sua compra foi efetuada com sucesso</h2>
-
+                <h2>Parabéns!</h2><strong>{customerName}</strong>
+                <h2>Sua compra  do item: {product.name} foi efetuada com sucesso</h2>
+                
             </Paper>
             </div>
         </div>
         </>
     )
+}
+
+export const getServerSideProps: GetServerSideProps = async ({query, params}) =>{
+    const sessionId = String(query.session_id);
+
+    const session = await stripe.checkout.sessions.retrieve(sessionId,{
+        expand: ['line_items', 'line_items.data.price.product']
+    });
+    const customerName = session.customer_details?.name;
+    const product = session.line_items?.data[0].price?.product as Stripe.Product;
+
+    // const sessionId = session.;
+    //Lembrar de passar  asessionId noa api
+    return {
+        props: {
+            customerName,
+            sessionId,
+            product: {
+            name: product.name,
+            description: product.description,
+            }
+
+        }
+    }
 }
